@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pet Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/petproduct.css" >
+</head>
+<body>
+  
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img src="../static/images/petfood2.jpg">
+          </div>
+          <div class="col-sm" id="box">
+            <h2 style="color: azure;">Product Details</h2>
+            <form method="post" action="{% url 'add_products' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Type of Product</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="prodtype">
+                  <option>Food</option>
+                  <option>Toys</option>
+                  <option>Treats</option>
+                  <option>Grooming</option>
+                  <option>Bed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Type of Pet</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="pettype">
+                  <option>Cat</option>
+                  <option>Dog</option>
+                  <option>Fish</option>
+                  <option>Reptile</option>
+                  <option>Birds</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Photo of Product</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photoprod">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Size</label>
+                <input class="form-control col-md-2" type="text" placeholder="" name="size">
+                <label for="exampleFormControlSelect1">Quantity</label>
+                <input class="form-control col-md-2" type="text" placeholder="" name="quantity">
+                <div class="form-group">
+                  <label for="exampleFormControlTextArea1">Price</label>
+                  <input class="form-control" type="text" placeholder="Nill" name="price">
+                </div>
+                <button type="submit" class="btn btn-success mt-3">Submit</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <button type="submit" class="btn btn-primary" ><a href="{% url 'view_products' %}" style="color: azure;">View Product Data</a></button>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>

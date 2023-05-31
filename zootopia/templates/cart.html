@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/cart.css" >
+</head>
+<body>
+    <div style="background-color: #263A29;"><h1>Shopping Cart</h1></div>
+    
+    <div class="card-deck">
+        {% for i in data %}
+        <div class="card">
+            <img src=/media/{{i.photo}} class="card-img-top" alt="..." name="petphoto">
+          <div class="card-body">
+            <h2 class="card-title" name="petname">{{i.petname}}</h2>
+            <hr>
+            <h4 name="price">Price: {{i.price}}</h4>
+            </div>
+            
+        </div>
+        {% endfor %}
+      </div >
+      <div style="text-align:center;">
+      <button type="submit" class="btn btn-success" ><a href="{% url 'order_pay' %}" style="text-decoration: none; color: white;">Place Order</a></button><br>
+      <button type="submit" class="btn btn-primary mr-2" ><a href="{% url 'show_pets' %}" style="text-decoration: none; color: white;">Add Pets</a></button>
+      <button type="submit" class="btn btn-danger ml-2" ><a href="{% url 'show_products' %}" style="text-decoration: none; color: white;">Add Products</a></button>
+    </div>
+    </form>
+</div>
+</div>
+    <script src="../static/js/cart.js"></script> <!-- This is for the quanity button (+/-)-->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>
