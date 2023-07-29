@@ -1,0 +1,26 @@
+.card-deck{
+    margin:10%;
+      
+}
+
+#caring{
+  background-color: #0A2050;
+  
+}
+
+.card-img-top {
+width: 100%;
+height: 30vw;
+object-fit: cover;
+}
+.card{
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #5C8984;
+  height: 10%;
+  
+  
+}
+.row {
+  margin-top: 0px;
+}

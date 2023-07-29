@@ -1,0 +1,25 @@
+body{
+            background-color: #FFFFFF;
+            color: #FFFFFF;
+        }
+        .container {
+            margin-top:40px;
+            margin-bottom: 100px;
+            
+        }
+        img {
+            height: 400px;
+        }
+        #box{
+            background-color: #52757f;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        h1{
+            color: #52757f; 
+            text-align: center; 
+            margin-top: 200px;
+        }
+        .submit{
+            margin-left: 160px;
+        }
