@@ -1,0 +1,5 @@
+.venv/
+django_project/__pycache__/
+petshop_project/__pycache__/
+zootopia/__pycache__/
+zootopia/migrations/__pycache__/
